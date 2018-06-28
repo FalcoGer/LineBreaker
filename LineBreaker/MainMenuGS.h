@@ -22,7 +22,5 @@ public:
 private:
     std::vector<MenuItem*> items;
     unsigned int selectedItem;
-
-    inline void printHello() { cout << "Hello World!" << endl; }
 };
 

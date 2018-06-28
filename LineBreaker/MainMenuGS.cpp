@@ -1,11 +1,15 @@
 #include "MainMenuGS.h"
 
+// Fixme: figure out a way to put function pointers to functions in MainMenuGS into the callback member of a MenuItem
+
+void printHello() { cout << "Hello World!" << endl; }
+
 MainMenuGS::MainMenuGS(sf::Font* font)
     : GameState(GameState::EGameState::MainMenu)
 {
     // create the menu here
     items.push_back(new MenuItem(NULL, "Start", font));
-    items.push_back(new MenuItem(NULL, "Print Helloworld", font));
+    items.push_back(new MenuItem(printHello, "Print Helloworld", font));
     items.push_back(new MenuItem(NULL, "Exit", font));
 }
 
@@ -89,12 +93,14 @@ void MainMenuGS::handleEvent(sf::Event evnt)
                 if (items[i]->getRect().contains(mousePos))
                 {
                     selectedItem = i;
+                    // and execute
+                    items[selectedItem]->callCallback();
                     break;
                 }
             }
+            // note: if you put execute call here, the selected item will be
+            // executed regardless of if the mouse is actually over it or not
         }
-        // and execute
-        items[selectedItem]->callCallback();
         break;
     } // end mouse button pressed
     default:
