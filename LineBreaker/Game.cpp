@@ -10,7 +10,7 @@ Game::Game()
     fpsText.setString(std::to_string(fps));
     fpsText.setFillColor(sf::Color(0, 128, 0, 255));
     fpsText.setPosition(16.0f, 16.0f);
-    fpsText.setCharacterSize(10.0f);
+    fpsText.setCharacterSize(10);
 }
 
 

@@ -5,7 +5,7 @@
 class GameState
 {
 public:
-    static enum EGameState
+    enum EGameState
     {
         MainMenu,
         GameRunning,

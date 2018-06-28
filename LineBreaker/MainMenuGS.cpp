@@ -59,7 +59,7 @@ void MainMenuGS::handleEvent(sf::Event evnt)
             break;
         case sf::Keyboard::W:           // move one option up, loop from top to bottom
         case sf::Keyboard::Up:
-            selectedItem = (selectedItem == 0) ? (items.size() - 1) : (selectedItem - 1);
+            selectedItem = (selectedItem == 0) ? static_cast<unsigned int>(items.size() - 1) : (selectedItem - 1);
             break;
         default:
             break;
