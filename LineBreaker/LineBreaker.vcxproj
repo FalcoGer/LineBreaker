@@ -161,6 +161,7 @@
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="LineBreaker.cpp" />
     <ClCompile Include="MainMenuGS.cpp" />
+    <ClCompile Include="MenuGS.cpp" />
     <ClCompile Include="MenuItem.cpp" />
     <ClCompile Include="ActionCoutExample.cpp" />
   </ItemGroup>
@@ -170,6 +171,7 @@
     <ClInclude Include="GameAction.h" />
     <ClInclude Include="GameState.h" />
     <ClInclude Include="MainMenuGS.h" />
+    <ClInclude Include="MenuGS.h" />
     <ClInclude Include="MenuItem.h" />
     <ClInclude Include="ActionCoutExample.h" />
   </ItemGroup>

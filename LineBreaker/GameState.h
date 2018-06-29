@@ -27,6 +27,6 @@ public:
 
     inline EGameState getState() { return state; }
     inline void setState(EGameState state) { this->state = state; }
-protected:
+private:
     EGameState state;
 };

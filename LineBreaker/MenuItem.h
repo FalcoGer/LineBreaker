@@ -15,6 +15,9 @@ public:
     MenuItem(GameAction* action, std::string textString, const sf::Font* font);
     ~MenuItem();
 
+    inline void setTextSize(unsigned int size) { text.setCharacterSize(size); }
+    inline void setTextScale(float x = 1.0f, float y = 1.0f) { text.setScale(x, y); }
+
 private:
     // callback to what happens when the item is clicked
     GameAction* action;
