@@ -33,9 +33,6 @@
     <ClCompile Include="GameGS.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="RandomNumberGenerator.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="GameBoard.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>

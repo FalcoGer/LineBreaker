@@ -1,4 +1,5 @@
 #include "Framework.h"
+#include "MainMenuGS.h"
 
 
 Framework::Framework(string title, sf::VideoMode vm)
@@ -159,3 +160,15 @@ bool Framework::handleEvent(sf::Event evnt)
     }
     return handled;
 }
+
+float Framework::getRandomFloat(float min, float max)
+{
+	return RndGenFloat.normalDistributedRandomNumber(min, max);
+}
+long int Framework::getRandomLong(long int min, long int max)
+{
+	return RndGenLong.normalDistributedRandomNumber(min, max);
+}
+
+RandomNumberGenerator<long int> Framework::RndGenLong;
+RandomNumberGenerator<float> Framework::RndGenFloat;

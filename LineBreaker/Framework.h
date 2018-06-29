@@ -3,7 +3,7 @@
 #include "SFML/Graphics.hpp"
 #include "GameState.h"
 #include "GameGS.h"
-#include "MainMenuGS.h"
+//#include "MainMenuGS.h"
 #include "RandomNumberGenerator.h"
 
 class Framework
@@ -21,8 +21,8 @@ public:
     
     inline bool isEnd() { return gs == NULL; }
 
-    static inline float getRandomFloat(float min, float max) { return RndGenFloat.normalDistributedRandomNumber(min, max); }
-    static inline long int getRandomLong(long int min, long int max) { return RndGenLong.normalDistributedRandomNumber(min, max); }
+    static float getRandomFloat(float min, float max);
+    static long int getRandomLong(long int min, long int max);
 private:
     sf::RenderWindow window;
     sf::Clock clk;

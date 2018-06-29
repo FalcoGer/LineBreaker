@@ -164,7 +164,6 @@
     <ClCompile Include="MainMenuGS.cpp" />
     <ClCompile Include="MenuGS.cpp" />
     <ClCompile Include="MenuItem.cpp" />
-    <ClCompile Include="RandomNumberGenerator.cpp" />
     <ClCompile Include="Snake.cpp" />
     <ClCompile Include="SnakeAI.cpp" />
     <ClCompile Include="SnakeLocal.cpp" />
