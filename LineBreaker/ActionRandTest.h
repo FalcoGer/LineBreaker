@@ -1,7 +1,9 @@
 #pragma once
-#include "MenuItem.h"
-#include <iostream>
+#include "GameAction.h"
+#include "GameState.h"
 #include "Framework.h"
+
+#include <iostream>
 
 using namespace std;
 
