@@ -1,14 +1,16 @@
 #pragma once
-
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
+#include "RenderItem.h"
+
 class GameState
+    : public RenderItem
 {
 public:
     enum EGameState
     {
         MainMenu,
-        GameRunning,
+        Game,
         Exit
     };
 

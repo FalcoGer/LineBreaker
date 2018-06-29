@@ -5,11 +5,11 @@
 #include "GameState.h"
 #include "MainMenuGS.h"
 
-class Game
+class Framework
 {
 public:
-    Game(string title, sf::VideoMode vm = sf::VideoMode(800, 600));
-    ~Game();
+    Framework(string title, sf::VideoMode vm = sf::VideoMode(800, 600));
+    ~Framework();
 
     void run();
 

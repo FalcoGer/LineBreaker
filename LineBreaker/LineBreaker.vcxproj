@@ -158,8 +158,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ActionChangeGameState.cpp" />
-    <ClCompile Include="Game.cpp" />
-    <ClCompile Include="LineBreaker.cpp" />
+    <ClCompile Include="Framework.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="MainMenuGS.cpp" />
     <ClCompile Include="MenuGS.cpp" />
     <ClCompile Include="MenuItem.cpp" />
@@ -167,13 +167,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ActionChangeGameState.h" />
-    <ClInclude Include="Game.h" />
+    <ClInclude Include="Framework.h" />
     <ClInclude Include="GameAction.h" />
     <ClInclude Include="GameState.h" />
     <ClInclude Include="MainMenuGS.h" />
     <ClInclude Include="MenuGS.h" />
     <ClInclude Include="MenuItem.h" />
     <ClInclude Include="ActionCoutExample.h" />
+    <ClInclude Include="RenderItem.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

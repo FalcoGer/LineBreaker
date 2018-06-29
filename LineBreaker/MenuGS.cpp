@@ -27,7 +27,9 @@ void MenuGS::draw(sf::RenderWindow & window)
     sf::Vector2f pos((window.getSize().x / 3.0f), (window.getSize().y / 4.0f));
     for (int i = 0; i < items.size(); i++)
     {
-        items[i]->draw(window, pos, i == selectedItem);
+        items[i]->setPos(pos);
+        items[i]->setSelected(i == selectedItem);
+        items[i]->draw(window);
         pos.y += 32.0f;
     }
 }
@@ -103,20 +105,8 @@ void MenuGS::handleEvent(sf::Event evnt)
 
 void MenuGS::update(sf::Int64 deltaTime)
 {
-    // animate selected item (pulse smaller and larger)
-    animationCycle += deltaTime;
-    const unsigned int cylcleTime = 1500000; // microseconds
-    if (animationCycle >= cylcleTime)
+    for (auto& item : items)
     {
-        animationCycle -= cylcleTime; // setting 0 would cause hicky animations
-    }
-    // multiply with 2*pi to get 1 full sine wave within 1 second range
-    // then divide by cycle time to stretch it over the desired time frame
-    float newScale = 1.0f + (sin(static_cast<float>(animationCycle) * static_cast<float>(2.0 * M_PI) / cylcleTime) / 8.0f);
-
-    // apply animation
-    for (int i = 0; i < items.size(); i++)
-    {
-        items[i]->setTextScale((i == selectedItem) ? newScale : 1.0f, 1.0f);
+        item->update(deltaTime);
     }
 }

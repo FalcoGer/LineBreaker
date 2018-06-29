@@ -15,12 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="LineBreaker.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Game.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="MenuItem.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
@@ -36,11 +30,14 @@
     <ClCompile Include="MenuGS.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="Framework.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Game.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
     <ClInclude Include="MenuItem.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
@@ -60,6 +57,12 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="MenuGS.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderItem.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

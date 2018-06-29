@@ -1,6 +1,7 @@
-#include "Game.h"
+#include "Framework.h"
 
-Game::Game(string title, sf::VideoMode vm)
+
+Framework::Framework(string title, sf::VideoMode vm)
 {
     font.loadFromFile("Resources/Fonts/Monospace.ttf");
 
@@ -22,7 +23,7 @@ Game::Game(string title, sf::VideoMode vm)
 }
 
 
-Game::~Game()
+Framework::~Framework()
 {
     if (!gs)
     {
@@ -32,7 +33,7 @@ Game::~Game()
     window.close();
 }
 
-void Game::run()
+void Framework::run()
 {
     sf::Event evnt;
     while (window.isOpen())
@@ -59,7 +60,7 @@ void Game::run()
 }
 
 
-void Game::update(sf::Int64 deltaTime)
+void Framework::update(sf::Int64 deltaTime)
 {
     if (gs->hasGameStateChanged())
     {
@@ -72,6 +73,8 @@ void Game::update(sf::Int64 deltaTime)
         case GameState::EGameState::Exit:
             break;
         case GameState::EGameState::MainMenu:
+            gs = new MainMenuGS(&font);
+        case GameState::EGameState::Game:
             gs = new MainMenuGS(&font);
         default:
             break;
@@ -86,7 +89,7 @@ void Game::update(sf::Int64 deltaTime)
     }
 }
 
-void Game::draw()
+void Framework::draw()
 {
     // draw game state
     if (gs)
@@ -97,7 +100,7 @@ void Game::draw()
     window.draw(fpsText);
 }
 
-bool Game::handleEvent(sf::Event evnt)
+bool Framework::handleEvent(sf::Event evnt)
 {
     bool handled = false;
     // handle global events (closing, alt+f4, alt+enter, resize)
