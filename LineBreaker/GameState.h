@@ -26,6 +26,7 @@ public:
     virtual bool hasGameStateChanged() = 0;
 
     inline EGameState getState() { return state; }
+    inline void setState(EGameState state) { this->state = state; }
 protected:
     EGameState state;
 };

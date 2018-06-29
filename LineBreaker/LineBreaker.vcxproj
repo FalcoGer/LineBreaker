@@ -157,6 +157,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ActionChangeGameState.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="LineBreaker.cpp" />
     <ClCompile Include="MainMenuGS.cpp" />
@@ -164,6 +165,7 @@
     <ClCompile Include="ActionCoutExample.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ActionChangeGameState.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameAction.h" />
     <ClInclude Include="GameState.h" />
