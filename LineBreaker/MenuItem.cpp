@@ -21,6 +21,9 @@ MenuItem::MenuItem(GameAction* action, std::string textString, const sf::Font* f
 
 MenuItem::~MenuItem()
 {
+#if _DEBUG
+    printf("MenuItem @ %p destroy\n", this);
+#endif
     if (action)
     {
         delete(action);

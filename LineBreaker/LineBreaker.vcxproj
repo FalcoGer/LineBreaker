@@ -157,24 +157,37 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ActionChangeGameState.cpp" />
     <ClCompile Include="Framework.cpp" />
+    <ClCompile Include="GameBoard.cpp" />
+    <ClCompile Include="GameGS.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainMenuGS.cpp" />
     <ClCompile Include="MenuGS.cpp" />
     <ClCompile Include="MenuItem.cpp" />
-    <ClCompile Include="ActionCoutExample.cpp" />
+    <ClCompile Include="RandomNumberGenerator.cpp" />
+    <ClCompile Include="Snake.cpp" />
+    <ClCompile Include="SnakeAI.cpp" />
+    <ClCompile Include="SnakeLocal.cpp" />
+    <ClCompile Include="SnakeNetwork.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ActionChangeGameState.h" />
+    <ClInclude Include="ActionRandTest.h" />
     <ClInclude Include="Framework.h" />
     <ClInclude Include="GameAction.h" />
+    <ClInclude Include="GameBoard.h" />
+    <ClInclude Include="GameGS.h" />
     <ClInclude Include="GameState.h" />
     <ClInclude Include="MainMenuGS.h" />
     <ClInclude Include="MenuGS.h" />
     <ClInclude Include="MenuItem.h" />
     <ClInclude Include="ActionCoutExample.h" />
+    <ClInclude Include="RandomNumberGenerator.h" />
     <ClInclude Include="RenderItem.h" />
+    <ClInclude Include="Snake.h" />
+    <ClInclude Include="SnakeAI.h" />
+    <ClInclude Include="SnakeLocal.h" />
+    <ClInclude Include="SnakeNetwork.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

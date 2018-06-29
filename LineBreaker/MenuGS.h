@@ -7,13 +7,11 @@ class MenuGS :
 {
 public:
     MenuGS(GameState::EGameState state);
-    ~MenuGS();
+    virtual ~MenuGS();
 
     void draw(sf::RenderWindow& window);
     void handleEvent(sf::Event evnt);
     void update(sf::Int64 deltaTime);
-
-    virtual bool hasGameStateChanged() = 0;
 protected:
     std::vector<MenuItem*> items;
 private:

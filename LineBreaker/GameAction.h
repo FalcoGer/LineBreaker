@@ -8,7 +8,12 @@ class GameAction
 {
 public:
     inline GameAction(GameState* gs) { this->gs = gs; }
-    inline ~GameAction() {}
+    virtual inline ~GameAction()
+    {
+#if _DEBUG
+        printf("GameAction @ %p destroy\n", this);
+#endif
+    }
 
     virtual void invoke() = 0;
 protected:

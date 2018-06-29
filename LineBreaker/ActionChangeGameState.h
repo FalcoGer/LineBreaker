@@ -4,10 +4,15 @@ class ActionChangeGameState :
     public GameAction
 {
 public:
-    ActionChangeGameState(GameState* gs, GameState::EGameState newState);
-    ~ActionChangeGameState();
+    inline ActionChangeGameState(GameState* gs, GameState::EGameState newState) : GameAction(gs) { this->newState = newState; }
+    inline ~ActionChangeGameState()
+    {
+#if _DEBUG
+        printf("ActionChangeGameState @ %p destroy\n", this);
+#endif
+    }
 
-    void invoke();
+    inline void invoke() { this->getGameState()->setState(newState); }
 private:
     GameState::EGameState newState;
 };

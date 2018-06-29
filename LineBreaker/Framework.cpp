@@ -9,8 +9,8 @@ Framework::Framework(string title, sf::VideoMode vm)
     fpsText.setFont(font);
     fpsText.setString(std::to_string(fps));
     fpsText.setFillColor(sf::Color(0, 128, 0, 255));
-    fpsText.setPosition(16.0f, 16.0f);
-    fpsText.setCharacterSize(10);
+    fpsText.setPosition(16.0f, 4.0f);
+    fpsText.setCharacterSize(16);
 
     isFullscreen = false;
     vmNonFS = vm;
@@ -25,6 +25,9 @@ Framework::Framework(string title, sf::VideoMode vm)
 
 Framework::~Framework()
 {
+#if _DEBUG
+    printf("Framework @ %p destroy\n", this);
+#endif
     if (!gs)
     {
         delete(gs);
@@ -74,8 +77,10 @@ void Framework::update(sf::Int64 deltaTime)
             break;
         case GameState::EGameState::MainMenu:
             gs = new MainMenuGS(&font);
+            break;
         case GameState::EGameState::Game:
-            gs = new MainMenuGS(&font);
+            gs = new GameGS();
+            break;
         default:
             break;
         }

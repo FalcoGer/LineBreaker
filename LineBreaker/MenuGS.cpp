@@ -9,6 +9,9 @@ MenuGS::MenuGS(GameState::EGameState state)
 
 MenuGS::~MenuGS()
 {
+#if _DEBUG
+    printf("MenuGS @ %p destroy\n", this);
+#endif
     // cleanup of the menu items created with new
     for (int i = 0; i < items.size(); i++)
     {

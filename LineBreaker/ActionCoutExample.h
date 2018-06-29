@@ -8,11 +8,15 @@ class ActionCoutExample :
     public GameAction
 {
 public:
-    ActionCoutExample(GameState* gs, string text);
-    ~ActionCoutExample();
+    inline ActionCoutExample(GameState* gs, string text) : GameAction(gs) { this->text = text; }
+    inline ~ActionCoutExample()
+    {
+#if _DEBUG
+        printf("ActionCoutExample @ %p destroy\n", this);
+#endif
+    }
 
-    void invoke();
+    inline void invoke() { cout << text << endl; }
 private:
     string text;
 };
-

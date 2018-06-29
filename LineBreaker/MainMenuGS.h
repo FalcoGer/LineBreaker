@@ -4,6 +4,7 @@
 #include "MenuItem.h"
 #include "ActionCoutExample.h"
 #include "ActionChangeGameState.h"
+#include "ActionRandTest.h"
 #include <iostream>
 #include <vector>
 
@@ -15,7 +16,5 @@ class MainMenuGS :
 public:
     MainMenuGS(sf::Font* font);
     ~MainMenuGS();
-
-    inline bool hasGameStateChanged() { return getState() != GameState::EGameState::MainMenu; }
 };
 

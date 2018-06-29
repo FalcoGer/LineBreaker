@@ -1,9 +1,10 @@
 #pragma once
-
 #include "SFML/Window.hpp"
 #include "SFML/Graphics.hpp"
 #include "GameState.h"
+#include "GameGS.h"
 #include "MainMenuGS.h"
+#include "RandomNumberGenerator.h"
 
 class Framework
 {
@@ -19,6 +20,9 @@ public:
     bool handleEvent(sf::Event evnt);
     
     inline bool isEnd() { return gs == NULL; }
+
+    static inline float getRandomFloat(float min, float max) { return RndGenFloat.normalDistributedRandomNumber(min, max); }
+    static inline long int getRandomLong(long int min, long int max) { return RndGenLong.normalDistributedRandomNumber(min, max); }
 private:
     sf::RenderWindow window;
     sf::Clock clk;
@@ -37,5 +41,8 @@ private:
 
     GameState* gs;
     sf::Font font;
+
+    static RandomNumberGenerator<long int> RndGenLong;
+    static RandomNumberGenerator<float> RndGenFloat;
 };
 
