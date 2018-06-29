@@ -7,9 +7,9 @@ void MenuItem::draw(sf::RenderWindow& window, sf::Vector2f pos, bool selected)
     window.draw(text);
 }
 
-MenuItem::MenuItem(void (*callback)(), std::string textString, const sf::Font* font)
+MenuItem::MenuItem(GameAction* action, std::string textString, const sf::Font* font)
 {
-    this->callback = callback;
+    this->action = action;
 
     text.setFont(*font);
     text.setString(textString);
@@ -19,4 +19,9 @@ MenuItem::MenuItem(void (*callback)(), std::string textString, const sf::Font* f
 
 MenuItem::~MenuItem()
 {
+    if (action)
+    {
+        delete(action);
+        action = NULL;
+    }
 }

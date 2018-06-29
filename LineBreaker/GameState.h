@@ -9,7 +9,6 @@ public:
     {
         MainMenu,
         GameRunning,
-        GamePaused,
         Exit
     };
 

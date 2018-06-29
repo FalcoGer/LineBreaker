@@ -27,6 +27,9 @@
     <ClCompile Include="MainMenuGS.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="ActionCoutExample.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
@@ -39,6 +42,12 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="GameState.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="GameAction.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionCoutExample.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

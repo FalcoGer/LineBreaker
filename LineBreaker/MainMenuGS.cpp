@@ -1,15 +1,11 @@
 #include "MainMenuGS.h"
 
-// Fixme: figure out a way to put function pointers to functions in MainMenuGS into the callback member of a MenuItem
-
-void printHello() { cout << "Hello World!" << endl; }
-
 MainMenuGS::MainMenuGS(sf::Font* font)
     : GameState(GameState::EGameState::MainMenu)
 {
     // create the menu here
     items.push_back(new MenuItem(NULL, "Start", font));
-    items.push_back(new MenuItem(printHello, "Print Helloworld", font));
+    items.push_back(new MenuItem(new ActionCoutExample(this, "Hello World!") , "Print Helloworld", font));
     items.push_back(new MenuItem(NULL, "Exit", font));
 }
 

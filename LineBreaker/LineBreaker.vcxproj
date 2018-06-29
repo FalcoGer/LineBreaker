@@ -161,12 +161,15 @@
     <ClCompile Include="LineBreaker.cpp" />
     <ClCompile Include="MainMenuGS.cpp" />
     <ClCompile Include="MenuItem.cpp" />
+    <ClCompile Include="ActionCoutExample.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h" />
+    <ClInclude Include="GameAction.h" />
     <ClInclude Include="GameState.h" />
     <ClInclude Include="MainMenuGS.h" />
     <ClInclude Include="MenuItem.h" />
+    <ClInclude Include="ActionCoutExample.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
